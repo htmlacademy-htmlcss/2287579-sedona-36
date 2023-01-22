@@ -8,16 +8,17 @@
     <header class="page-header">
       <nav class="navigation">
 
-        <div class="logo-holder">
-          <img class="logo-img" src="#" alt="лого Седоны" width="" height="">
+        <div class="navigation-logo-holder">
+          <img class="navigation-logo" src="#" alt="лого Седоны" width="" height="">
         </div>
 
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="main.html">Главная</a>
+            <!-- надо ли ставить класс navigation-link-current на все страницы , которые открыты?-->
+            <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="about.html">О седоне</a>
+            <a class="navigation-link" href="#">О седоне</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -36,6 +37,7 @@
             </a>
           </li>
           <li class="navigation-item">
+            <!-- нужно ли дать type="button" этой ссылке?-->
             <a class="navigation-item" href="#">
               <span class="visually-hidden">Хочу сюда</span>
             </a>
@@ -48,6 +50,7 @@
     <main class="main-index">
       <section class="hero">
         <img src="#" alt="изображение Седоны" class="hero-img">
+        <!-- могу ли использовать тег <br> я соответствия макету ? не станет ли БР проблемой при адаптивах?-->
 
         <h1>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h1>
         <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -116,6 +119,7 @@
         <p class="hotels-search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
       </section>
+  </main>
 
       <section class="subscribe">
 
@@ -126,7 +130,7 @@
           <button class="button" type="submit">Подписаться</button>
         </form>
       </section>
-    </main>
+
     <footer class="page-footer">
       <section class="footer-social">
         <h3 class="visually-hidden">Наши соцсети</h3>
