@@ -7,295 +7,281 @@
     <title>Страница каталога</title>
 </head>
 <body>
-    <header class="page-header">
-        <nav class="navigation">
-
-          <div class="navigation-logo-holder">
-            <a href="index.html">
-                <img class="navigation-logo" src="#" alt="лого Седоны" width="" height="">
-            </a>
-          </div>
-
-          <ul class="navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-link" href="index.html">Главная</a>
+  <header class="page-header">
+    <nav class="navigation">
+      <div class="navigation-logo-holder">
+        <a href="index.html">
+          <img class="navigation-logo" src="#" alt="лого Седоны" width="" height="">
+        </a>
+      </div>
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a class="navigation-link" href="index.html">Главная</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">О седоне</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+        </li>
+      </ul>
+      <ul class="navigation-list navigation-user">
+        <li class="navigation-item">
+          <a class="navigation-item" href="#">
+            <span class="visually-hidden">Поиск</span>
+            <img src="#" alt="Иконка поиска">
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-item" href="#">
+            <span class="visually-hidden">Избранное</span>
+            <img src="#" alt="Иконка избранное">
+          </a>
+        </li>
+        <li class="navigation-item">
+          <!-- нужно ли указывать type="button"? тк в index.html я не указал-->
+          <a class="navigation-item" href="#" type="button">
+            <span class="visually-hidden">Хочу сюда</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- я записал класс main-catalog , вместо main-inner. на сколько это критично/плохо?-->
+  <main class="main-catalog">
+    <header class="catalog-header">
+      <h1 class="catalog-header-title">Гостиницы Седоны</h1>
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-item">
+          <a href="index.html" class="breadcrumbs-link">
+            <!-- добавил скрытие визуальное к спан-->
+            <span class="visually-hidden">Главная</span>
+            <img src="#" alt="Иконка главной страницы">
+          </a>
+        </li>
+        <li class="breadcrumbs-item">
+          <!-- не указана ссылка тк является страницей
+          на которой сейчас находимся -->
+          <a href="#" class="breadcrumbs-link catalog-link-current">Гостиницы</a>
+        </li>
+      </ul>
+    </header>
+    <section class="catalog-hotels">
+      <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
+      <form action="https://echo.htmlacademy.ru/" method="get" class="catalog-filter">
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Инфраструктура:</legend>
+            <ul class="catalog-filter-list">
+              <li class="catalog-filter-item">
+                <label for="" class="control">
+                  <input type="checkbox" class="control-input" name="swimming-pool" checked>
+                          Бассейн
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label for="" class="control">
+                  <input type="checkbox" class="control-input" name="parking" checked>
+                    Парковка
+                </label>
+              </li>
+              <li class="catalog-filter-item">
+                <label for="" class="control">
+                  <input type="checkbox" class="control-input" name="wifi">
+                    Wi-Fi
+                </label>
+              </li>
+            </ul>
+        </fieldset>
+        <fieldset class="catalog-filter-group">
+          <legend class="catalog-filter-title">Тип жилья:</legend>
+          <ul class="catalog-filter-list">
+            <li class="catalog-filter-item">
+              <label for="" class="control">
+                <input type="radio" class="control-input-radio" name="type-of-appartment" value="hotel" checked>
+                  Гостиница
+              </label>
             </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">О седоне</a>
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input type="radio" class="control-input-radio" name="type-of-appartment" value="motel">
+                  Мотель
+              </label>
             </li>
-            <li class="navigation-item">
-              <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+            <li class="catalog-filter-item">
+              <label class="control">
+                <input type="radio" class="control-input-radio" name="type-of-appartment" value="appartments">
+                  Апартаменты
+              </label>
             </li>
           </ul>
-          <ul class="navigation-list navigation-user">
-            <li class="navigation-item">
-              <a class="navigation-item" href="#">
-                <span class="visually-hidden">Поиск</span>
-                <img src="#" alt="Иконка поиска">
-              </a>
-            </li>
-
-            <li class="navigation-item">
-              <a class="navigation-item" href="#">
-                <span class="visually-hidden">Избранное</span>
-                <img src="#" alt="Иконка избранное">
-              </a>
-            </li>
-            <li class="navigation-item">
-              <!-- нужно ли указывать type="button"? тк в index.html я не указал-->
-              <a class="navigation-item" href="#" type="button">
-                <span class="visually-hidden">Хочу сюда</span>
-              </a>
-            </li>
-          </ul>
-
-        </nav>
-      </header>
-      <!-- я записал класс main-catalog , вместо main-inner. на сколько это критично/плохо?-->
-      <main class="main-catalog">
-        <header class="catalog-header">
-          <h1 class="catalog-header-title">Гостиницы Седоны</h1>
-          <ul class="breadcrumbs-list">
-            <li class="breadcrumbs-item">
-              <a href="index.html" class="breadcrumbs-link">
-                <!-- добавил скрытие визуальное к спан-->
-                <span class="visually-hidden">Главная</span>
-                <img src="#" alt="Иконка главной страницы">
-              </a>
-            </li>
-            <li class="breadcrumbs-item">
-              <!-- не указана ссылка тк является страницей
-              на которой сейчас находимся -->
-              <a href="" class="breadcrumbs-link">Гостиницы</a>
-            </li>
-          </ul>
-        </header>
-
-        <section class="catalog-hotels">
-          <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
-          <form action="https://echo.htmlacademy.ru/" method="get" class="catalog-filter">
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Инфраструктура:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label for="" class="control">
-                      <input type="checkbox" class="control-input" name="swimming-pool" checked>
-                        Бассейн
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label for="" class="control">
-                      <input type="checkbox" class="control-input" name="parking" checked>
-                        Парковка
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label for="" class="control">
-                      <input type="checkbox" class="control-input" name="wifi">
-                        Wi-Fi
-                    </label>
-                  </li>
-                </ul>
-            </fieldset>
-
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Тип жилья:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label for="" class="control">
-
-                      <input type="radio" class="control-input-radio" name="type-of-appartment" value="hotel" checked>
-                        Гостиница
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label for="" class="control">
-                      <input type="radio" class="control-input-radio" name="type-of-appartment" value="motel">
-                        Мотель
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label for="" class="control">
-                      <input type="radio" class="control-input-radio" name="type-of-appartment" value="appartments">
-                        Апартаменты
-                    </label>
-                  </li>
-                </ul>
-            </fieldset>
+        </fieldset>
             <!-- за разметку далее вообше не уверен. Не знаю как сверстать раздел Стоимость , шкалу,
             кнопки Применить и Сбросить.-->
-            <fieldset class="catalog-filter-group">
-              <label for="">
-                <input type="text" placeholder="0">от
-              </label>
-
-              <label for="">
-                <input type="text" placeholder="9000">до
-              </label>
-              <meter class="meter-hotels" min="0" value="20%"></meter>
-
-            </fieldset>
-
-            <fieldset class="catalog-filter-group-btn">
-              <input type="submit" class="accept" name="accept" id="input-submit-accept" value="Применить">
-              <input type="submit" class="reset" name="reset" id="input-submit-reset" value="Сбросить">
-            </fieldset>
-          </form>
-
-          <select name="" id="" class="select-control"></select>
-
-
-        </section>
-
-        <section class="catalog-catalog">
-          <h2 class="catalog-catalog-results">Найдено гостиниц: 38</h2>
-          <select name="" id="" class="select-control" aria-label="Сортировка">
-            <option value="cheap">Сначала дешевые</option>
-            <option value="popular">Сначала популярные</option>
-            <option value="expensive">Сначала дорогие</option>
-          </select>
+        <fieldset class="catalog-filter-group">
+          <label>
+            <input type="text" placeholder="0">от
+          </label>
+          <label>
+            <input type="text" placeholder="9000">до
+          </label>
+          <meter class="meter-hotels" min="0" value="20%"></meter>
+        </fieldset>
+        <fieldset class="catalog-filter-group-btn">
+        <!-- наверное лучше сделать так, запутался:
+        <a type="button" class="accept">Применить</a>
+        <a type="button" class="reset">Сбросить</a>
+        -->
+          <input type="submit" class="accept" name="accept" id="input-submit-accept" value="Применить">
+          <input type="submit" class="reset" name="reset" id="input-submit-reset" value="Сбросить">
+        </fieldset>
+      </form>
+    </section>
+    <section class="catalog-catalog">
+      <h2 class="catalog-catalog-results">Найдено гостиниц: 38</h2>
+      <select name="" id="" class="select-control" aria-label="Сортировка">
+        <option value="cheap">Сначала дешевые</option>
+        <option value="popular">Сначала популярные</option>
+        <option value="expensive">Сначала дорогие</option>
+      </select>
           <!-- почему в обучение по барбершопу преподаватель создает тут ссылку и тип кнопку
           но не добавляет изображение? как они его получат потом ? с помощью CSS ? Можно добавлять сюда
           изображение как я сделал ?-->
-          <a href="#" class="cards-view">
-            <img src="#" alt="иконка отображения карточками">
-            <span class="visually-hidden">Показать карточками</span>
-          </a>
-          <a href="#" class="full-view">
-            <img src="#" alt="иконка отображения одной карточки">
-            <span class="visually-hidden">Показать одной карточкой</span>
-          </a>
-          <a href="#" class="list-view">
-            <img src="#" alt="иконка отображения списком">
-            <span class="visually-hidden">Показать списком</span>
-          </a>
-
-          <ul class="hotel-card-list">
-
-            <li class="hotel-card-item">
-              <a href="#" class="hotel-card-link">
-                <img src="#" alt="Amara Resort & Spa" class="hotel-card-image">
-                <h3 class="hotel-card-title">Amara Resort & Spa</h3>
-              </a>
-              <span class="hotel-card-type">Гостиница</span>
-              <span class="hotel-card-price">От 4000 ₽</span>
-              <a href="#" class="hotel-card-button button-more">подробнее</a>
-              <a href="#" class="hotel-card-button button-favorites">в избранное</a>
+      <div class="icon-view-container">
+        <a href="#" class="cards-view">
+          <img src="#" alt="иконка отображения карточками">
+          <span class="visually-hidden">Показать карточками</span>
+        </a>
+        <a href="#" class="full-view">
+          <img src="#" alt="иконка отображения одной карточки">
+          <span class="visually-hidden">Показать одной карточкой</span>
+        </a>
+        <a href="#" class="list-view">
+          <img src="#" alt="иконка отображения списком">
+          <span class="visually-hidden">Показать списком</span>
+        </a>
+      </div>
+      <div class="hotel-card-container">
+        <ul class="hotel-card-list">
+          <li class="hotel-card-item">
+            <a href="#" class="hotel-card-link">
+              <img src="#" alt="Amara Resort & Spa" class="hotel-card-image">
+              <h3 class="hotel-card-title">Amara Resort & Spa</h3>
+            </a>
+            <span class="hotel-card-type">Гостиница</span>
+            <span class="hotel-card-price">От 4000 ₽</span>
+            <a href="#" class="hotel-card-button button-more">подробнее</a>
+            <a href="#" class="hotel-card-button button-favorites">в избранное</a>
             <!-- не знаю как сделать разметку под рейтинг ( звезды)-->
-              <a href="#" class="hotel-card-button button-rate">Рейтинг: 8,5</a>
-            </li>
-
-            <li class="hotel-card-item">
-              <a href="#" class="hotel-card-link">
-                <img src="#" alt="Villas at Poco Diablo" class="hotel-card-image">
-                <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
-              </a>
-              <span class="hotel-card-type">Гостиница</span>
-              <span class="hotel-card-price">От 5000 ₽</span>
-              <a href="#" class="hotel-card-button button-more">подробнее</a>
+            <a href="#" class="hotel-card-button button-rate">Рейтинг: 8,5</a>
+          </li>
+          <li class="hotel-card-item">
+            <a href="#" class="hotel-card-link">
+              <img src="#" alt="Villas at Poco Diablo" class="hotel-card-image">
+              <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+            </a>
+            <span class="hotel-card-type">Гостиница</span>
+            <span class="hotel-card-price">От 5000 ₽</span>
+            <a href="#" class="hotel-card-button button-more">подробнее</a>
             <!-- ОБРАТИТЬ внимание на статус "в избраннОМ" -->
-              <a href="#" class="hotel-card-button button-favorites">в избранном</a>
+            <a href="#" class="hotel-card-button button-favorites">в избранном</a>
             <!-- не знаю как сделать разметку под рейтинг ( звезды)-->
-              <a href="#" class="hotel-card-button button-rate">Рейтинг: 9,2</a>
-            </li>
-
-            <li class="hotel-card-item">
-              <a href="#" class="hotel-card-link">
-                <img src="#" alt="Desert Quail Inn" class="hotel-card-image">
-                <h3 class="hotel-card-title">Desert Quail Inn</h3>
-              </a>
-              <span class="hotel-card-type">Гостиница</span>
-              <span class="hotel-card-price">От 2500 ₽</span>
-              <a href="#" class="hotel-card-button button-more">подробнее</a>
-              <a href="#" class="hotel-card-button button-favorites">в избранное</a>
+            <a href="#" class="hotel-card-button button-rate">Рейтинг: 9,2</a>
+          </li>
+          <li class="hotel-card-item">
+            <a href="#" class="hotel-card-link">
+              <img src="#" alt="Desert Quail Inn" class="hotel-card-image">
+              <h3 class="hotel-card-title">Desert Quail Inn</h3>
+            </a>
+            <span class="hotel-card-type">Гостиница</span>
+            <span class="hotel-card-price">От 2500 ₽</span>
+            <a href="#" class="hotel-card-button button-more">подробнее</a>
+            <a href="#" class="hotel-card-button button-favorites">в избранное</a>
             <!-- не знаю как сделать разметку под рейтинг ( звезды)-->
-              <a href="#" class="hotel-card-button button-rate">Рейтинг: 6,9</a>
-            </li>
-
-            <li class="hotel-card-item">
-              <a href="#" class="hotel-card-link">
-                <img src="#" alt="GreenTree Inn" class="hotel-card-image">
-                <h3 class="hotel-card-title">GreenTree Inn</h3>
-              </a>
-              <span class="hotel-card-type">Гостиница</span>
-              <span class="hotel-card-price">От 1500 ₽</span>
-              <a href="#" class="hotel-card-button button-more">подробнее</a>
-              <a href="#" class="hotel-card-button button-favorites">в избранное</a>
+            <a href="#" class="hotel-card-button button-rate">Рейтинг: 6,9</a>
+          </li>
+          <li class="hotel-card-item">
+            <a href="#" class="hotel-card-link">
+              <img src="#" alt="GreenTree Inn" class="hotel-card-image">
+              <h3 class="hotel-card-title">GreenTree Inn</h3>
+            </a>
+            <span class="hotel-card-type">Гостиница</span>
+            <span class="hotel-card-price">От 1500 ₽</span>
+            <a href="#" class="hotel-card-button button-more">подробнее</a>
+            <a href="#" class="hotel-card-button button-favorites">в избранное</a>
             <!-- не знаю как сделать разметку под рейтинг ( звезды)-->
-              <a href="#" class="hotel-card-button button-rate">Рейтинг: 5,0</a>
-            </li>
-          </ul>
-          <ul class="pagination">
-            <li class="pagination-item">
-              <a href="#" class="pagination-link">1</a>
-            </li>
-            <li class="pagination-item">
-              <a href="#" class="pagination-link">2</a>
-            </li>
-            <li class="pagination-item">
-              <a href="#" class="pagination-link">3</a>
-            </li>
-            <li class="pagination-item">
-              <a href="#" class="pagination-link">4</a>
-            </li>
+            <a href="#" class="hotel-card-button button-rate">Рейтинг: 5,0</a>
+          </li>
+        </ul>
+      </div>
+      <div class="pagination-container">
+        <ul class="pagination">
+          <li class="pagination-item">
+            <a href="#" class="pagination-link">1</a>
+          </li>
+          <li class="pagination-item">
+            <a href="#" class="pagination-link">2</a>
+          </li>
+          <li class="pagination-item">
+            <a href="#" class="pagination-link">3</a>
+          </li>
+          <li class="pagination-item">
+            <a href="#" class="pagination-link">4</a>
+          </li>
             <!-- я не знаю как правильно сделать тут кнопку с тремя точками
               для разворачивания (?) других страниц-->
-            <li class="pagination-item">
-              <a href="#" class="pagination-link pagination-link-more">...</a>
-            </li>
-            <li class="pagination-item">
-              <a href="#" class="pagination-link">10</a>
-            </li>
-          </ul>
-        </section>
-      </main>
-
-      <section class="subscribe subscribe-catalog">
-
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru/" method="post" class="subscribe">
-          <input type="email" name="email-date" placeholder="Ваш e-mail">
-          <button class="button" type="submit">Подписаться</button>
-        </form>
-      </section>
-
-    <footer class="page-footer">
-      <section class="footer-social">
-        <h3 class="visually-hidden">Наши соцсети</h3>
-        <ul class="footer-social-list">
-          <!-- в обучении говорится сделать ссылку с классом button, но я сделал
-          в виде ссылки с изображением вложенным, тк иконки соцсетей у нас в проекте разные.
-          прав я или нет ?)-->
-          <li class="footer-social-item">
-            <a href="https://vk.com/htmlacademy">
-              <img src="#" alt="Вконтакте" width="" height="">
-            </a>
+          <li class="pagination-item">
+            <a href="#" class="pagination-link pagination-link-more">...</a>
           </li>
-          <li class="footer-social-item">
-            <a href="https://t.me/htmlacademy">
-              <img src="#" alt="Телеграм" width="" height="">
-            </a>
+          <li class="pagination-item">
+            <a href="#" class="pagination-link">10</a>
           </li>
-          <li class="footer-social-item">
-            <a href="https://www.youtube.com/user/htmlacademyru">
-              <img src="#" alt="Ютуб" width="" height="">
-            </a>
-          </li>
-
         </ul>
-      </section>
-      <section class="footer-tel-number">
-        <h3 class="visually-hidden">Наш телефон</h3>
-        <a href="tel:+78128121212">+7 (812) 812-12-12</a>
-      </section>
-      <section class="footer-html-academy">
-        <h3 class="visually-hidden">Наш сайт</h3>
-        <a href="https://htmlacademy.ru/">
-          <img src="#" alt="Логотип htmlacademy" width="" height="">
-        </a>
-      </section>
-    </footer>
+      </div>
+    </section>
+  </main>
+  <section class="subscribe subscribe-catalog">
+    <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+    <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <form action="https://echo.htmlacademy.ru/" method="post" class="subscribe">
+      <input type="email" name="email-date" placeholder="Ваш e-mail">
+      <button class="button" type="submit">Подписаться</button>
+    </form>
+  </section>
+  <footer class="page-footer">
+    <section class="footer-social">
+      <h3 class="visually-hidden">Наши соцсети</h3>
+      <ul class="footer-social-list">
+        <!-- в обучении говорится сделать ссылку с классом button, но я сделал
+        в виде ссылки с изображением вложенным, тк иконки соцсетей у нас в проекте разные.
+        прав я или нет ?)-->
+        <li class="footer-social-item">
+          <a href="https://vk.com/htmlacademy">
+            <img src="#" alt="Вконтакте" width="" height="">
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a href="https://t.me/htmlacademy">
+            <img src="#" alt="Телеграм" width="" height="">
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a href="https://www.youtube.com/user/htmlacademyru">
+            <img src="#" alt="Ютуб" width="" height="">
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="footer-tel-number">
+      <h3 class="visually-hidden">Наш телефон</h3>
+      <a href="tel:+78128121212">+7 (812) 812-12-12</a>
+    </section>
+    <section class="footer-html-academy">
+      <h3 class="visually-hidden">Наш сайт</h3>
+      <a href="https://htmlacademy.ru/">
+        <img src="#" alt="Логотип htmlacademy" width="" height="">
+      </a>
+    </section>
+  </footer>
 
 </body>
 </html>

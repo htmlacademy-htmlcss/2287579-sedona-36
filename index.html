@@ -7,15 +7,13 @@
   <body>
     <header class="page-header">
       <nav class="navigation">
-
         <div class="navigation-logo-holder">
           <img class="navigation-logo" src="#" alt="лого Седоны" width="" height="">
         </div>
-
         <ul class="navigation-list">
           <li class="navigation-item">
             <!-- надо ли ставить класс navigation-link-current на все страницы , которые открыты?-->
-            <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+            <a class="navigation-link navigation-link-current" href="#">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О седоне</a>
@@ -31,7 +29,6 @@
               <img src="#" alt="Иконка поиска">
             </a>
           </li>
-
           <li class="navigation-item">
             <a class="navigation-item" href="#">
               <span class="visually-hidden">Избранное</span>
@@ -45,22 +42,18 @@
             </a>
           </li>
         </ul>
-
       </nav>
     </header>
-
     <main class="main-index">
       <section class="hero">
         <img src="#" alt="изображение Седоны" class="hero-img">
         <!-- могу ли использовать тег <br> я соответствия макету ? не станет ли БР проблемой при адаптивах?-->
-
         <h1>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h1>
         <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
       <section class="advantages">
         <h2 class="invisible-hidden">Наши преимущества</h2>
         <!-- сделаю списком , возможно ( как в подготовке к курсу), надо сделать через div -->
-
         <ul class="advantages-list">
           <li class="advantages-item">
             <h3 class="advantages-title">Настоящий городок</h3>
@@ -68,7 +61,7 @@
             <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </li>
           <li class="advantages-item">
-            <img src="#" alt="вид Седоны" class="advantages-img-1" width="" height="">
+            <img src="#" alt="вид Седоны" class="advantages-img" width="" height="">
           </li>
           <li class="advantages-item">
             <h3 class="advantages-title">Небольшая площадь</h3>
@@ -86,7 +79,7 @@
             <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="advantages-item">
-            <img src="#" alt="Каньон Седоны" class="advantages-img-2" width="" height="">
+            <img src="#" alt="Каньон Седоны" class="advantages-img" width="" height="">
           </li>
           <li class="advantages-item">
             <h3 class="advantages-title">Там есть мост дьявола</h3>
@@ -94,8 +87,7 @@
             <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </li>
         </ul>
-    </section>
-
+      </section>
       <section class="welcome">
         <h2 class="welcome-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
         <p class="welcome-description">Опытный персонал и качественное обслуживание!</p>
@@ -106,8 +98,7 @@
           </li>
           <li class="welcome-item">
             <h3 class="welcome-title">Еда</h3>
-            <p class="welcome-description">Всегда заказывайте
-              топовый фирменный бургер, вы не разочаруетесь!</p>
+            <p class="welcome-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
           <li class="welcome-item">
             <h3 class="welcome-title">Сувениры</h3>
@@ -115,31 +106,27 @@
           </li>
         </ul>
       </section>
-
       <section class="hotels-search">
         <h2 class="hotels-search-title">Заинтересовались?</h2>
         <p class="hotels-search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+        <a href="#">Поиск гостиницы в Седоне</a>
       </section>
-  </main>
-
-      <section class="subscribe">
-
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+    </main>
+    <section class="subscribe">
+      <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" method="post" class="subscribe">
           <input type="email" name="email-date" placeholder="Ваш e-mail">
           <button class="button" type="submit">Подписаться</button>
         </form>
-      </section>
-
+    </section>
     <footer class="page-footer">
       <section class="footer-social">
         <h3 class="visually-hidden">Наши соцсети</h3>
         <ul class="footer-social-list">
-          <!-- в обучении говорится сделать ссылку с классом button, но я сделал
-          в виде ссылки с изображением вложенным, тк иконки соцсетей у нас в проекте разные.
-          прав я или нет ?)-->
+        <!-- в обучении говорится сделать ссылку с классом button, но я сделал
+        в виде ссылки с изображением вложенным, тк иконки соцсетей у нас в проекте разные.
+        прав я или нет ?)-->
           <li class="footer-social-item">
             <a href="https://vk.com/htmlacademy">
               <img src="#" alt="Вконтакте" width="" height="">
@@ -155,7 +142,6 @@
               <img src="#" alt="Ютуб" width="" height="">
             </a>
           </li>
-
         </ul>
       </section>
       <section class="footer-tel-number">
@@ -169,6 +155,5 @@
         </a>
       </section>
     </footer>
-
   </body>
 </html>
