@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница каталога</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Страница каталога</title>
 </head>
 <body>
   <header class="page-header">
@@ -22,47 +22,39 @@
           <a class="navigation-link" href="#">О седоне</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+          <a class="navigation-link navigation-link-current">Гостиницы</a>
         </li>
       </ul>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
-          <a class="navigation-item" href="#">
+          <a class="navigation-item-link navigation-item-search" href="#">
             <span class="visually-hidden">Поиск</span>
-            <img src="#" alt="Иконка поиска">
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-item" href="#">
+          <a class="navigation-item-link navigation-item-favorites" href="#">
             <span class="visually-hidden">Избранное</span>
-            <img src="#" alt="Иконка избранное">
           </a>
         </li>
         <li class="navigation-item">
-          <!-- нужно ли указывать type="button"? тк в index.html я не указал-->
-          <a class="navigation-item" href="#" type="button">
+          <a class="navigation-item-link navigation-item-button" href="#">
             <span class="visually-hidden">Хочу сюда</span>
           </a>
         </li>
       </ul>
     </nav>
   </header>
-  <!-- я записал класс main-catalog , вместо main-inner. на сколько это критично/плохо?-->
-  <main class="main-catalog">
+  <main class="main main-catalog">
     <header class="catalog-header">
       <h1 class="catalog-header-title">Гостиницы Седоны</h1>
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-item">
           <a href="index.html" class="breadcrumbs-link">
-            <!-- добавил скрытие визуальное к спан-->
             <span class="visually-hidden">Главная</span>
-            <img src="#" alt="Иконка главной страницы">
           </a>
         </li>
         <li class="breadcrumbs-item">
-          <!-- не указана ссылка тк является страницей
-          на которой сейчас находимся -->
-          <a href="#" class="breadcrumbs-link catalog-link-current">Гостиницы</a>
+          <a class="breadcrumbs-link breadcrumbs-link-current">Гостиницы</a>
         </li>
       </ul>
     </header>
@@ -71,26 +63,26 @@
       <form action="https://echo.htmlacademy.ru/" method="get" class="catalog-filter">
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
-                <label for="" class="control">
-                  <input type="checkbox" class="control-input" name="swimming-pool" checked>
-                          Бассейн
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label for="" class="control">
-                  <input type="checkbox" class="control-input" name="parking" checked>
-                    Парковка
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label for="" class="control">
-                  <input type="checkbox" class="control-input" name="wifi">
-                    Wi-Fi
-                </label>
-              </li>
-            </ul>
+          <ul class="catalog-filter-list">
+            <li class="catalog-filter-item">
+              <label for="" class="control">
+                <input type="checkbox" class="control-input" name="swimming-pool" checked>
+                  Бассейн
+              </label>
+            </li>
+            <li class="catalog-filter-item">
+              <label for="" class="control">
+                <input type="checkbox" class="control-input" name="parking" checked>
+                  Парковка
+              </label>
+            </li>
+            <li class="catalog-filter-item">
+              <label for="" class="control">
+                <input type="checkbox" class="control-input" name="wifi">
+                  Wi-Fi
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Тип жилья:</legend>
@@ -115,24 +107,17 @@
             </li>
           </ul>
         </fieldset>
-            <!-- за разметку далее вообше не уверен. Не знаю как сверстать раздел Стоимость , шкалу,
-            кнопки Применить и Сбросить.-->
-        <fieldset class="catalog-filter-group">
+        <fieldset class="catalog-filter-group" name="catalog-filter-fieldset">
           <label>
-            <input type="text" placeholder="0">от
+            <input type="number" placeholder="0">от
           </label>
           <label>
-            <input type="text" placeholder="9000">до
+            <input type="number" placeholder="9000">до
           </label>
-          <meter class="meter-hotels" min="0" value="20%"></meter>
         </fieldset>
-        <fieldset class="catalog-filter-group-btn">
-        <!-- наверное лучше сделать так, запутался:
-        <a type="button" class="accept">Применить</a>
-        <a type="button" class="reset">Сбросить</a>
-        -->
-          <input type="submit" class="accept" name="accept" id="input-submit-accept" value="Применить">
-          <input type="submit" class="reset" name="reset" id="input-submit-reset" value="Сбросить">
+        <fieldset class="catalog-filter-group-button" name="catalog-button-fielset">
+          <button class="accept" type="submit">Применить</button>
+          <button class="reset" type="reset">Сбросить</button>
         </fieldset>
       </form>
     </section>
@@ -143,20 +128,14 @@
         <option value="popular">Сначала популярные</option>
         <option value="expensive">Сначала дорогие</option>
       </select>
-          <!-- почему в обучение по барбершопу преподаватель создает тут ссылку и тип кнопку
-          но не добавляет изображение? как они его получат потом ? с помощью CSS ? Можно добавлять сюда
-          изображение как я сделал ?-->
       <div class="icon-view-container">
-        <a href="#" class="cards-view">
-          <img src="#" alt="иконка отображения карточками">
+        <a href="#" class="button-view button-by-cards-view">
           <span class="visually-hidden">Показать карточками</span>
         </a>
-        <a href="#" class="full-view">
-          <img src="#" alt="иконка отображения одной карточки">
+        <a href="#" class="button-view button-full-view">
           <span class="visually-hidden">Показать одной карточкой</span>
         </a>
-        <a href="#" class="list-view">
-          <img src="#" alt="иконка отображения списком">
+        <a href="#" class="button-view button-list-view">
           <span class="visually-hidden">Показать списком</span>
         </a>
       </div>
@@ -171,8 +150,8 @@
             <span class="hotel-card-price">От 4000 ₽</span>
             <a href="#" class="hotel-card-button button-more">подробнее</a>
             <a href="#" class="hotel-card-button button-favorites">в избранное</a>
-            <!-- не знаю как сделать разметку под рейтинг ( звезды)-->
-            <a href="#" class="hotel-card-button button-rate">Рейтинг: 8,5</a>
+            <p class="stars stars-4"><span class="visually-hidden">Количество звезд: 4</span></p>
+            <p class="hotel-rate">Рейтинг: 8,5</p>
           </li>
           <li class="hotel-card-item">
             <a href="#" class="hotel-card-link">
@@ -182,10 +161,9 @@
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">От 5000 ₽</span>
             <a href="#" class="hotel-card-button button-more">подробнее</a>
-            <!-- ОБРАТИТЬ внимание на статус "в избраннОМ" -->
-            <a href="#" class="hotel-card-button button-favorites">в избранном</a>
-            <!-- не знаю как сделать разметку под рейтинг ( звезды)-->
-            <a href="#" class="hotel-card-button button-rate">Рейтинг: 9,2</a>
+            <a href="#" class="hotel-card-button button-favorites-current">в избранном</a>
+            <p class="stars stars-4"><span class="visually-hidden">Количество звезд: 4</span></p>
+            <p class="hotel-rate">Рейтинг: 9,2</p>
           </li>
           <li class="hotel-card-item">
             <a href="#" class="hotel-card-link">
@@ -196,8 +174,8 @@
             <span class="hotel-card-price">От 2500 ₽</span>
             <a href="#" class="hotel-card-button button-more">подробнее</a>
             <a href="#" class="hotel-card-button button-favorites">в избранное</a>
-            <!-- не знаю как сделать разметку под рейтинг ( звезды)-->
-            <a href="#" class="hotel-card-button button-rate">Рейтинг: 6,9</a>
+            <p class="stars stars-3"><span class="visually-hidden">Количество звезд: 3</span></p>
+            <p class="hotel-rate">Рейтинг: 6,9</p>
           </li>
           <li class="hotel-card-item">
             <a href="#" class="hotel-card-link">
@@ -208,8 +186,8 @@
             <span class="hotel-card-price">От 1500 ₽</span>
             <a href="#" class="hotel-card-button button-more">подробнее</a>
             <a href="#" class="hotel-card-button button-favorites">в избранное</a>
-            <!-- не знаю как сделать разметку под рейтинг ( звезды)-->
-            <a href="#" class="hotel-card-button button-rate">Рейтинг: 5,0</a>
+            <p class="stars stars-2"><span class="visually-hidden">Количество звезд: 2</span></p>
+            <a class="hotel-rate">Рейтинг: 5,0</a>
           </li>
         </ul>
       </div>
@@ -227,8 +205,6 @@
           <li class="pagination-item">
             <a href="#" class="pagination-link">4</a>
           </li>
-            <!-- я не знаю как правильно сделать тут кнопку с тремя точками
-              для разворачивания (?) других страниц-->
           <li class="pagination-item">
             <a href="#" class="pagination-link pagination-link-more">...</a>
           </li>
@@ -251,22 +227,19 @@
     <section class="footer-social">
       <h3 class="visually-hidden">Наши соцсети</h3>
       <ul class="footer-social-list">
-        <!-- в обучении говорится сделать ссылку с классом button, но я сделал
-        в виде ссылки с изображением вложенным, тк иконки соцсетей у нас в проекте разные.
-        прав я или нет ?)-->
         <li class="footer-social-item">
-          <a href="https://vk.com/htmlacademy">
-            <img src="#" alt="Вконтакте" width="" height="">
+          <a class="social-link social-link-vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">VK</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a href="https://t.me/htmlacademy">
-            <img src="#" alt="Телеграм" width="" height="">
+          <a class="social-link social-link-telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Telegram</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a href="https://www.youtube.com/user/htmlacademyru">
-            <img src="#" alt="Ютуб" width="" height="">
+          <a class="social-link social-link-youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">YouTube</span>
           </a>
         </li>
       </ul>
@@ -277,8 +250,8 @@
     </section>
     <section class="footer-html-academy">
       <h3 class="visually-hidden">Наш сайт</h3>
-      <a href="https://htmlacademy.ru/">
-        <img src="#" alt="Логотип htmlacademy" width="" height="">
+      <a class="html-academy-logo" href="https://htmlacademy.ru/">
+        <span class="visually-hidden">html-academy logo</span>
       </a>
     </section>
   </footer>
