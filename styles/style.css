@@ -24,13 +24,7 @@ body {
 /*index*/
 /* main header */
 
-.page-header,
-.hero,
-.welcome,
-.hotels-search,
-.page-footer,
-.catalog-catalog,
-.subscribe-catalog {
+.body-wrapper {
   background-color: #FFFFFF;
 }
 
@@ -61,6 +55,37 @@ body {
   font-size: 16px;
   line-height: 20px;
   border: none;
+}
+
+.button-brown-large {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.button-brown-small {
+  /*понадобится при дальнейшей стилизации - размеры кнопок*/
+}
+
+.button-blue-large {
+  background-color: #82B3D3;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.button-blue-medium {
+  background-color: #82B3D3;
+}
+
+.button-blue-small {
+  background-color: #82B3D3;
+}
+
+.button-green-small {
+  background-color: #7DB54F;
+}
+
+.button-transparent {
+  background-color: transparent;
 }
 
 .clear-list {
@@ -133,22 +158,6 @@ body {
   background-color: #83B3D31F;
 }
 
-/*hotels search */
-
-.hotels-search-link {
-  font-size: 20px;
-  line-height: 36px;
-}
-
-.button-accept,
-.button-reset {
-  background-color: #82B3D3;
-}
-
-.button-reset {
-  background-color: transparent;
-}
-
 /* subscribe*/
 
 .subscribe-index {
@@ -161,12 +170,6 @@ body {
 .subscribe-title-index,
 .subscribe-description-index {
   color: #FFFFFF;
-}
-
-.button-subscribe {
-  background-color: #82B3D3;
-  font-size: 20px;
-  line-height: 36px;
 }
 
 /*footer*/
@@ -226,10 +229,6 @@ body {
   text-decoration: none;
 }
 
-.button-favorites {
-  background-color: #82B3D3;
-}
-
 .pagination-link {
   background-color: #82B3D3;
   color: #FFFFFF;
@@ -247,14 +246,10 @@ body {
 
 .pagination-link-current {
   background-color: #F2F2F2;
-  color:#000000;
-  }
+  color: #000000;
+}
 
 .pagination-link-more {
   background-color: transparent;
   color: #000000;
-  }
-
-.button-favorites-current {
-  background-color: #7DB54F;
 }
