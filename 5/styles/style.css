@@ -1,0 +1,398 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2");
+  display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #F2F2F2;
+  color: #333333;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+/*index*/
+/* main header */
+
+.body-wrapper {
+  background-color: #FFFFFF;
+}
+
+.site-pad {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: #F2F2F2;
+}
+
+/* универсальные классы описаний*/
+
+.description-text {
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.title-text {
+  color: #000000;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button {
+  background-color: #756157;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+}
+
+.button-brown-large {
+  display: block;
+  width: 376px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.button-brown-small {
+  /*понадобится при дальнейшей стилизации - размеры кнопок*/
+}
+
+.button-blue-large {
+  background-color: #82B3D3;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.button-blue-medium {
+  background-color: #82B3D3;
+}
+
+.button-blue-small {
+  background-color: #82B3D3;
+}
+
+.button-green-small {
+  background-color: #7DB54F;
+}
+
+.button-transparent {
+  background-color: transparent;
+}
+
+.clear-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/*navigation*/
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-logo-holder {
+  width: 138px;
+  margin-left: 70px;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: space-around;
+  width: 340px;
+  margin-left: 30px;
+}
+
+.navigation-user {
+  display: flex;
+  justify-content: space-between;
+  width: 268px;
+  margin-right: 70px;
+  margin-left: auto;
+}
+
+.navigation-link {
+  color: #000000;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* hero */
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.hero {
+  background-color: #7EB3D3;
+  background-image: url("../images/background/hero-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% auto;
+}
+
+/* advantages */
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.advantages-description {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.advantages-blue {
+  width: 1200px;
+  background-color: #82B3D3;
+  color: #FFFFFF;
+}
+
+.advantages-blue .advantages-title {
+  color: #FFFFFF;
+}
+
+.advantages-light-blue {
+  width: 400px;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-light-light-blue {
+  width: 400px;
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-img {
+  display: block;
+}
+
+/* welcome */
+
+.welcome-list {
+  display: flex;
+}
+
+.welcome-item {
+  width: 400px;
+  padding: 0 85px;
+}
+
+.welcome-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.welcome-item-blue {
+  background-color: #83B3D31F;
+}
+
+/* subscribe*/
+
+.subscribe {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* я не знаю как центрировать кнопку и инпут к ней или форму.
+Возможно я забегаю вперед или упустил информацию..
+можно сделать родительский контейнер flex и задать column.
+но мне не хватает опыта понять
+
+.subscribe-form-main {
+
+}
+*/
+
+
+
+.subscribe-index {
+  background-color: #1E4043;
+  background-image: url("../images/background/subscribe-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% auto;
+}
+
+.subscribe-title-index,
+.subscribe-description-index {
+  color: #FFFFFF;
+}
+
+/*footer*/
+
+.page-footer {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-wrapper {
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-social-list {
+  width: 142px;
+  display: flex;
+}
+
+.html-academy-number {
+  text-decoration: none;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/*catalog*/
+
+.catalog-filter-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.catalog-filter-wrapper {
+  background-color: #6A6260;
+  background-image: url("../images/background/filter-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% auto;
+}
+
+.catalog-header-title {
+  color: #FFFFFF;
+}
+
+.breadcrumbs-link {
+  color: #FFFFFF;
+}
+
+.catalog-filter-title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.catalog-filter-item {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.select-control {
+  color: #333333;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* с сортировкой тоже проблемы - заголовок Найдено гостиниц 38 имеет после себя перенос строки
+могу сделать ему inline, но опять, либо я забегаю , либо потерялся в информации...*/
+
+.sorting-wrapper {
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*hotels cards*/
+
+.hotel-card-list {
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.hotel-card-item {
+  width: 340px;
+}
+
+.hotel-card-link {
+  color: #000000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+}
+
+.pagination-list {
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pagination-link {
+  background-color: #82B3D3;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-decoration: none;
+}
+
+.hotel-rate {
+  background-color: #F2F2F2;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.pagination-link-current {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.pagination-link-more {
+  background-color: transparent;
+  color: #000000;
+}
