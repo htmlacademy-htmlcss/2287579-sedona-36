@@ -37,14 +37,10 @@ body {
 /*index*/
 /* main header */
 
-.body-wrapper {
-  background-color: #FFFFFF;
-}
-
 .site-pad {
-  width: 1280px;
+  width: 1200px;
   margin: 0 auto;
-  background-color: #F2F2F2;
+  background-color: #FFFFFF;
 }
 
 /* универсальные классы описаний*/
@@ -77,15 +73,8 @@ body {
 }
 
 .button-brown-large {
-  display: block;
-  width: 376px;
-  margin: 0 auto;
   font-size: 20px;
   line-height: 36px;
-}
-
-.button-brown-small {
-  /*понадобится при дальнейшей стилизации - размеры кнопок*/
 }
 
 .button-blue-large {
@@ -120,13 +109,11 @@ body {
 
 .navigation {
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
+  padding: 0 70px;
 }
 
 .navigation-logo-holder {
   width: 138px;
-  margin-left: 70px;
 }
 
 .navigation-list {
@@ -140,7 +127,6 @@ body {
   display: flex;
   justify-content: space-between;
   width: 268px;
-  margin-right: 70px;
   margin-left: auto;
 }
 
@@ -154,11 +140,6 @@ body {
 }
 
 /* hero */
-
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-}
 
 .hero-img {
   display: block;
@@ -233,23 +214,23 @@ body {
   background-color: #83B3D31F;
 }
 
-/* subscribe*/
-
-.subscribe {
-  width: 1200px;
+.hotels-search-link {
+  display: block;
+  width: 376px;
   margin: 0 auto;
 }
+
+/* subscribe*/
 
 /* я не знаю как центрировать кнопку и инпут к ней или форму.
 Возможно я забегаю вперед или упустил информацию..
 можно сделать родительский контейнер flex и задать column.
 но мне не хватает опыта понять
-
-.subscribe-form-main {
-
-}
 */
-
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+}
 
 
 .subscribe-index {
@@ -265,11 +246,6 @@ body {
 }
 
 /*footer*/
-
-.page-footer {
-  width: 1200px;
-  margin: 0 auto;
-}
 
 .footer-wrapper {
   width: 1060px;
@@ -294,9 +270,8 @@ body {
 
 /*catalog*/
 
-.catalog-filter-wrapper {
-  width: 1200px;
-  margin: 0 auto;
+.catalog-catalog {
+  padding: 0 70px;
 }
 
 .catalog-filter-wrapper {
@@ -333,12 +308,7 @@ body {
   line-height: 21px;
 }
 
-/* с сортировкой тоже проблемы - заголовок Найдено гостиниц 38 имеет после себя перенос строки
-могу сделать ему inline, но опять, либо я забегаю , либо потерялся в информации...*/
-
 .sorting-wrapper {
-  width: 1060px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -346,10 +316,7 @@ body {
 /*hotels cards*/
 
 .hotel-card-list {
-  width: 1060px;
-  margin: 0 auto;
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -366,10 +333,7 @@ body {
 }
 
 .pagination-list {
-  width: 1060px;
-  margin: 0 auto;
   display: flex;
-  justify-content: flex-start;
 }
 
 .pagination-link {
