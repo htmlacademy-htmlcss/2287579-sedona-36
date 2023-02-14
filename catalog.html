@@ -131,7 +131,7 @@
         </div>
         <section class="catalog-catalog">
           <div class="sorting-wrapper">
-            <h2 class="catalog-catalog-results title-text">Найдено гостиниц:<span
+            <h2 class="catalog-catalog-results title-text">Найдено гостиниц: <span
                 class="catalog-catalog-quantity title-text">38</span></h2>
             <select name="" id="" class="select-control" aria-label="Сортировка">
               <option value="cheap">Сначала дешевые</option>
@@ -157,12 +157,21 @@
                   alt="Отель Amara Resort & Spa.">
                 <h3 class="hotel-card-title">Amara Resort & Spa</h3>
               </a>
-              <span class="hotel-card-type">Гостиница</span>
-              <span class="hotel-card-price">От 4000 ₽</span>
-              <a href="#" class="button button-brown-small">подробнее</a>
-              <a href="#" class="button button-blue-small">в избранное</a>
-              <p class="stars stars-4"><span class="visually-hidden">Количество звезд: 4</span></p>
-              <p class="hotel-rate">Рейтинг: 8,5</p>
+              <!-- div ниже задан в тестовом режиме-->
+              <div class="hotel-card-inside-text">
+                <span class="hotel-card-type">Гостиница</span>
+                <span class="hotel-card-price">От 4000 ₽</span>
+              </div>
+              <!-- div ниже задан в тестовом режиме-->
+              <div class="hotel-card-inside-buttons">
+                <a href="#" class="button button-brown-small">подробнее</a>
+                <a href="#" class="button button-blue-small">в избранное</a>
+              </div>
+              <!-- div ниже задан в тестовом режиме-->
+              <div class="hotel-card-inside-rating">
+                <p class="stars stars-4"><span class="visually-hidden">Количество звезд: 4</span></p>
+                <p class="hotel-rate">Рейтинг: 8,5</p>
+              </div>
             </li>
             <li class="hotel-card-item">
               <a href="#" class="hotel-card-link">
@@ -222,7 +231,7 @@
               <a href="#" class="pagination-link pagination-link-more">...</a>
             </li>
             <li class="pagination-item">
-              <a href="#" class="pagination-link">10</a>
+              <a href="#" class="pagination-link pagination-link-last">10</a>
             </li>
           </ul>
         </section>
