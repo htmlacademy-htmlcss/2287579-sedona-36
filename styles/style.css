@@ -30,6 +30,12 @@ body {
   color: #333333;
 }
 
+.clear-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -99,6 +105,8 @@ body {
 
 .button-brown-small {
   padding: 8px 26px;
+  width: 88px;
+  margin-bottom: 16px;
 }
 
 .button-blue-large {
@@ -116,11 +124,15 @@ body {
 .button-blue-small {
   background-color: #82B3D3;
   padding: 8px 20px;
+  width: 100px;
+  margin-bottom: 16px;
 }
 
 .button-green-small {
   background-color: #7DB54F;
   padding: 8px 18px;
+  width: 104px;
+  margin-bottom: 16px;
 }
 
 .button-transparent {
@@ -128,17 +140,14 @@ body {
 }
 
 .hotel-rate {
+  background-color: #F2F2F2;
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 35px;
+  text-align: center;
   margin: 0;
-
-}
-
-.clear-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  border-radius: 4px;
+  width: 140px;
 }
 
 /*navigation*/
@@ -181,7 +190,6 @@ body {
 .navigation-item-link {
   min-width: 44px;
 }
-
 
 /* hero */
 
@@ -264,8 +272,6 @@ body {
 /* welcome */
 
 .welcome-wrapper {
-  display: flex;
-  flex-direction: column;
   padding: 64px 348px;
 }
 
@@ -314,8 +320,6 @@ body {
 /* subscribe*/
 
 .subscribe {
-  display: flex;
-  flex-direction: column;
   padding: 96px 258px 104px;
 }
 
@@ -323,7 +327,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
 
 .subscribe-index {
   background-color: #1E4043;
@@ -474,19 +477,31 @@ body {
   margin-top: 16px;
   margin-bottom: 16px;
 }
-/* следующие .hotel-card-inside-text и .hotel-card-inside-buttons заданы в тестовом режиме */
-.hotel-card-inside-text {
+
+.hotel-card-content-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 300px;
+}
+
+.stars {
+  width: 140px;
+}
+
+.hotel-card-type {
+  padding-right: 10px;
   margin-bottom: 16px;
 }
 
-.hotel-card-inside-buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
+.hotel-card-price {
+  /*не ввел ширину для этих двух span (hotel-card-type и hotel-card-price) тк с шириной 50% сетка ломается.
+  Без width все работет отлично. Она необходима в итоге?*/
+  padding-left: 10px;
+  /* padding необходим для защиты от слипания? без него ничего не меняется тоже */
   margin-bottom: 16px;
+  /*margin-bottom: 16px;, заданный повторно этому span не влияет на отображение в карточке, но через devtools я вижу почему.
+  Все таки подумал безопаснее задать и второму span свойство margin-bottom, оставим?
+  как защита от слипания при переполнении?*/
 }
 
 .pagination-list {
@@ -497,6 +512,7 @@ body {
   margin-right: 8px;
 }
 
+/* старая версия через padding, но line height по макету (36px)
 .pagination-link {
   display: block;
   box-sizing: border-box;
@@ -512,14 +528,25 @@ body {
   border-radius: 4px;
 }
 
-.pagination-list li:last-child .pagination-link {
+.pagination-item:last-child .pagination-link {
   padding: 12px 18px;
 }
+*/
 
-.hotel-rate {
-  background-color: #F2F2F2;
-  font-size: 16px;
-  line-height: 20px;
+/* новая версия через line height: 60px , text-align: center*/
+.pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  background-color: #82B3D3;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 60px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
 }
 
 .pagination-link-current {
