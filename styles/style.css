@@ -198,13 +198,14 @@ body {
 
 .hotel-rate {
   background-color: #F2F2F2;
-  font-weight: 400;
+  text-transform: uppercase;
   font-size: 16px;
-  line-height: 35px;
-  text-align: center;
+  padding: 9px 22px 8px 23px;
+  box-sizing: border-box;
   margin: 0;
   border-radius: 4px;
-  width: 140px;
+  height: 37px;
+  /*height задал тк не могу добиться высоты в 37 , у меня 41 */
 }
 
 /*navigation*/
@@ -320,7 +321,8 @@ body {
 .hero-description,
 .welcome-description-main,
 .hotels-search-description,
-.subscribe-description-index {
+.subscribe-description-index,
+.subscribe-description-catalog {
   font-size: 22px;
   line-height: 26px;
 }
@@ -501,6 +503,15 @@ body {
   justify-content: center;
 }
 
+.input-subscribe {
+  width: 452px;
+  font: inherit;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 4px 0 0 4px;
+  background-color: #F2F2F2;
+}
+
 .subscribe-index {
   background-color: #1E4043;
   background-image: url("../images/background/subscribe-background.jpg");
@@ -513,9 +524,15 @@ body {
   margin-bottom: 20px;
 }
 
+.subscribe-text-wrapper {
+  width: 475px;
+  margin: 0 auto;
+}
+
 .subscribe-description-index {
   color: #FFFFFF;
   margin-bottom: 54px;
+  text-align: center;
 }
 
 .subscribe-title-catalog {
@@ -616,7 +633,6 @@ body {
   background-image: url("../images/background/filter-background.jpg");
   background-repeat: no-repeat;
   background-position: 100% auto;
-
 }
 
 .catalog-header-title {
@@ -649,18 +665,15 @@ body {
   line-height: 23px;
 }
 
-/* не знаю как оформить стили селекту*/
+/* не знаю как оформить стили галочке селекта*/
 .select-control {
   color: #333333;
   font-family: "PT Sans";
   font-size: 18px;
-  line-height: 21px;
-  padding: 14px 20px;
+  padding-left: 20px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   min-width: 292px;
-  height: 49px;
-  /* height временно для соответствия высоте, знаю что обрезал текст*/
 }
 
 .button-view {
@@ -709,6 +722,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 160px;
+  min-height: 49px;
 }
 
 /*hotels cards*/
