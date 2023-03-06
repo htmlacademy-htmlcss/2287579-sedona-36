@@ -80,9 +80,22 @@ body {
   margin: 0;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
 .button {
   background-color: #756157;
   color: #FFFFFF;
+  font-family: inherit;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -129,6 +142,7 @@ body {
 
 .button-blue-large {
   background-color: #82B3D3;
+  font-family: inherit;
   font-size: 20px;
   line-height: 36px;
   border-radius: 0 4px 4px 0;
@@ -150,7 +164,6 @@ body {
 .button-blue-medium {
   background-color: #82B3D3;
   padding: 8px 50px;
-  ;
 }
 
 .button-blue-small {
@@ -200,6 +213,7 @@ body {
   background-color: #F2F2F2;
   text-transform: uppercase;
   font-size: 16px;
+  line-height: 20px;
   padding: 9px 22px 8px 23px;
   box-sizing: border-box;
   margin: 0;
@@ -207,6 +221,8 @@ body {
   height: 37px;
   /*height задал тк не могу добиться высоты в 37 , у меня 41 */
 }
+
+
 
 /*navigation*/
 
@@ -255,11 +271,7 @@ body {
   text-decoration: none;
 }
 
-.navigation-item {
-  position: relative;
-}
-
-.navigation-link-current::before {
+.navigation-link-current:before {
   content: "";
   position: absolute;
   left: 0;
@@ -267,6 +279,18 @@ body {
   top: 44px;
   height: 2px;
   background-color: #756257;
+}
+
+.navigation-link:not(.navigation-link-current):hover {
+  opacity: 0.7;
+}
+
+.navigation-item {
+  position: relative;
+}
+
+.navigation-item-link:hover {
+  opacity: 0.7;
 }
 
 .navigation-item-search {
@@ -325,6 +349,7 @@ body {
 .subscribe-description-catalog {
   font-size: 22px;
   line-height: 26px;
+  text-align: center;
 }
 
 .hero:after {
@@ -621,7 +646,303 @@ body {
   min-height: 40px;
 }
 
+/*модальное окно*/
+
+.modal-container {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background: #FFFFFF;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-booking {
+  width: 577px;
+}
+
+.modal-close-button {
+  position: absolute;
+  display: flex;
+  right: 51px;
+  top: 64px;
+  width: 52px;
+  height: 52px;
+  padding: 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-close-button-svg {
+  margin: auto;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  fill-opacity: 0.3;
+}
+
+.modal-title {
+  margin-bottom: 64px;
+  text-align: left;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: 247px 88px 242px;
+}
+
+.group-date-in {
+  grid-column: 1 / 4;
+}
+
+.group-date-out {
+  grid-column: 1 / 4;
+}
+
+.group-adults {
+  grid-column: 1 / 2;
+}
+
+.group-children {
+  grid-column: 3 / 4;
+}
+
+.booking-form-search {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 577px;
+  padding: 18px 256px;
+  font-size: 20px;
+  line-height: 24px;
+  background-color: #83B3D3;
+}
+
+.booking-form-search:hover {
+  background-color: #68A2CA;
+}
+
+.booking-form-search:focus {
+  background-color: #68A2CA;
+}
+
+.field-clarification {
+  position: relative;
+}
+
+.clarification-text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.text-date-in::after {
+  content: "Мы не можем отправить вас в прошлое.";
+  position: absolute;
+  width: 280px;
+  height: 21px;
+  left: 155px;
+  top: 33px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  ;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: none;
+  color: #FF5757;
+}
+
+.text-date-out::after {
+  content: "На эти даты есть свободные номера. Пока есть.";
+  position: absolute;
+  width: 371px;
+  height: 21px;
+  left: 155px;
+  top: 33px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: none;
+  color: #333333;
+}
+
+.text-children {
+  display: flex;
+}
+
+.booking-form-field {
+  width: 375px;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 45px 12px 20px;
+  background-color: #F2F2F2;
+  font: inherit;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.booking-form-field:hover {
+  background-color: #E6E6E6;
+  color: #000000;
+  opacity: 0.6;
+  border: none;
+}
+
+.booking-form-field:focus {
+  background-color: #E6E6E6;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.field-date {
+  background-image: url("../images/icons/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+.field-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 46px;
+  margin-top: 0;
+}
+
+.field-group:last-child {
+  margin-bottom: 0;
+}
+
+.field-date {
+  margin-left: auto;
+}
+
+.field-count {
+  width: 27px;
+  border-radius: 0;
+  padding: 12px 2px;
+  text-align: center;
+}
+
+.field-button {
+  border: none;
+  background-color: #F2F2F2;
+  padding: 14px 10px;
+  cursor: pointer;
+}
+
+.field-button:hover svg {
+  fill: #000000;
+}
+
+.field-button:focus svg {
+  fill: #000000;
+}
+
+.field-button:active svg {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.button-minus {
+  border-radius: 4px 0 0 4px;
+}
+
+.button-plus {
+  border-radius: 0 4px 4px 0;
+}
+
+.button-minus {
+  margin-left: auto;
+}
+
+.button-minus-svg,
+.button-plus-svg {
+  display: block;
+}
+
+.tooltip {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  margin-top: -23px;
+  margin-left: 59px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px 18px 18px 22px;
+  border-radius: 10px;
+  display: block;
+  width: 216px;
+  position: absolute;
+  margin-top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-text:before {
+  content: "";
+  background-image: url("../images/icons/tooltip-triangle.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 99%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
 /*catalog*/
+/*главная форма*/
 
 .catalog-catalog {
   padding: 50px 70px 60px;
@@ -632,7 +953,6 @@ body {
   background-color: #6A6260;
   background-image: url("../images/background/filter-background.jpg");
   background-repeat: no-repeat;
-  background-position: 100% auto;
 }
 
 .catalog-header-title {
@@ -643,13 +963,73 @@ body {
   line-height: 78px;
 }
 
-.breadcrumbs-item {
+.breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-link {
+  display: block;
   color: #FFFFFF;
   margin-right: 28px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.breadcrumbs-svg-home:hover {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-svg-home:active {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-home:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 20px;
+  margin-left: 10px;
+  background-image: url("../images/icons/arrow.svg");
+  background-repeat: no-repeat;
+  cursor: auto;
+}
+
+.filter-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-form-wrapper-left {
+  display: flex;
+  width: 371px;
+  justify-content: space-between;
+}
+
+.filter-form-wrapper-right {
+  display: flex;
+  width: 549px;
+  justify-content: space-between;
+}
+
+.catalog-filter-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .catalog-filter-title {
@@ -657,6 +1037,8 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  text-transform: capitalize;
+  margin-bottom: 32px;
 }
 
 .catalog-filter-item {
@@ -665,15 +1047,210 @@ body {
   line-height: 23px;
 }
 
-/* не знаю как оформить стили галочке селекта*/
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.control {
+  position: relative;
+  padding-left: 36px;
+  cursor: pointer;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 2px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control-mark:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-input:checked + .control-mark:before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 10px;
+  top: 5px;
+  left: 4px;
+  background-image: url("../images/icons/checkbox-inner.svg");
+}
+
+.control-input-radio + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input-radio:checked + .control-mark:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+}
+
+.range {
+  margin-bottom: 8px;
+  width: 288px;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background-color: #E6E6E6;
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  gap: 2px;
+}
+
+.catalog-filter-label {
+  position: relative;
+}
+
+.range-input {
+  width: 83px;
+  padding: 12px 40px 12px 20px;
+  font: inherit;
+  background-color: #F2F2F2;
+  border: none;
+  margin-bottom: 36px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.range-input:hover {
+  background-color: #E6E6E6;
+}
+
+.range-input:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+  z-index: 1;
+}
+
+.range-input:active {
+  background-color: #F2F2F2;
+  outline: 2px solid #000000;
+}
+
+.input-from {
+  border-radius: 4px 0 0 4px;
+}
+
+.input-to {
+  border-radius: 0 4px 4px 0;
+}
+
+.input-definition {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/*сортировка*/
+
+.sorting-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
 .select-control {
+  align-self: stretch;
   color: #333333;
   font-family: "PT Sans";
   font-size: 18px;
   padding-left: 20px;
+  padding-right: 23px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   min-width: 292px;
+  margin-left: 200px;
+  background-image: url("../images/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 21px center;
+  appearance: none;
+}
+
+.select-control:hover {
+  border: 2px solid #68A2CA;
+}
+
+.select-control:focus {
+  outline: none;
+  border: 2px solid #68A2CA;
+}
+
+.select-control:active {
+  border-color: #3F5E72;
+}
+
+.select-control:disabled {
+  background: rgba(0, 0, 0, 0.3);
+  /*доделать */
 }
 
 .button-view {
@@ -710,22 +1287,16 @@ body {
   background-image: url("../images/icons/view-list.svg");
 }
 
-.sorting-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
 .icon-view-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 160px;
   min-height: 49px;
+  margin-left: auto;
 }
 
-/*hotels cards*/
+/*карточки гостиниц*/
 
 .hotel-card-list {
   display: grid;
@@ -785,6 +1356,8 @@ body {
   padding-left: 10px;
   margin-bottom: 16px;
 }
+
+/*пагинация*/
 
 .pagination-list {
   display: flex;
