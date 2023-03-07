@@ -665,7 +665,7 @@ input[type="number"]:focus {
 }
 
 .modal-container-close {
-  display: none;
+  /*display: none;*/
 }
 
 .modal {
@@ -774,34 +774,27 @@ input[type="number"]:focus {
   cursor: pointer;
 }
 
-.text-date-in::after {
-  content: "Мы не можем отправить вас в прошлое.";
+.group-date-in {
+  position: relative;
+}
+
+.message-under-field-red {
   position: absolute;
-  width: 280px;
-  height: 21px;
-  left: 155px;
-  top: 33px;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 400;
+  bottom: -22px;
+  left: 157px;
   font-size: 16px;
-  line-height: 21px;
-  text-transform: none;
   color: #FF5757;
 }
 
-.text-date-out::after {
-  content: "На эти даты есть свободные номера. Пока есть.";
+.group-date-out {
+  position: relative;
+}
+
+.message-under-field-normal {
   position: absolute;
-  width: 371px;
-  height: 21px;
-  left: 155px;
-  top: 33px;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 400;
+  bottom: -22px;
+  left: 157px;
   font-size: 16px;
-  line-height: 21px;
-  text-transform: none;
-  color: #333333;
 }
 
 .text-children {
