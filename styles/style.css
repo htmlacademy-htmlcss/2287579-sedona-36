@@ -664,7 +664,7 @@ input[type="number"]:focus {
 }
 
 .modal-container-close {
-  display: none;
+  /*display: none;*/
 }
 
 .modal {
@@ -756,6 +756,11 @@ input[type="number"]:focus {
   background-color: #68A2CA;
 }
 
+.booking-form-search:active {
+  background-color: #68A2CA;
+  color: #FFFFFF30;
+}
+
 .field-clarification {
   position: relative;
 }
@@ -813,16 +818,24 @@ input[type="number"]:focus {
   line-height: 24px;
 }
 
+.booking-form-field:placeholder-shown {
+  background-color: #F2F2F2;
+  color: #00000060;
+}
+
+.booking-form-field:not(:placeholder-shown) {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
 .booking-form-field:hover {
   background-color: #E6E6E6;
-  color: #000000;
-  opacity: 0.6;
-  border: none;
+  color: #00000060;
 }
 
 .booking-form-field:focus {
   background-color: #E6E6E6;
-  color: rgba(0, 0, 0, 0.6);
+  color: #00000060;
 }
 
 .field-date {
@@ -922,7 +935,6 @@ input[type="number"]:focus {
   line-height: 20px;
   padding: 15px 18px 18px 22px;
   border-radius: 10px;
-  display: block;
   width: 216px;
   position: absolute;
   margin-top: 15px;
@@ -1142,13 +1154,15 @@ input[type="number"]:focus {
 
 .range-toggle:hover {
   background-color: #E6E6E6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.range-toggle:focus {
-  outline: 3px solid #83B3D3;
-}
+/*.range-toggle:focus {
+  background-color: #FFFFFF;
+}*/
 
 .range-toggle:active {
+  background-color: #FFFFFF;
   outline: 2px solid #83B3D3;
 }
 
@@ -1188,13 +1202,10 @@ input[type="number"]:focus {
 
 .range-input:focus {
   background-color: #E6E6E6;
-  outline: 3px solid #83B3D3;
-  z-index: 1;
 }
 
 .range-input:active {
   background-color: #F2F2F2;
-  outline: 2px solid #000000;
 }
 
 .input-from {
@@ -1245,11 +1256,6 @@ input[type="number"]:focus {
 }
 
 .select-control:hover {
-  border: 2px solid #68A2CA;
-}
-
-.select-control:focus {
-  outline: none;
   border: 2px solid #68A2CA;
 }
 
