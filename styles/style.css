@@ -240,6 +240,7 @@ input[type="number"]:focus {
 .navigation-logo-holder {
   width: 140px;
   margin-bottom: -4px;
+  z-index: 1;
 }
 
 .navigation-logo {
@@ -664,7 +665,7 @@ input[type="number"]:focus {
 }
 
 .modal-container-close {
-  /*display: none;*/
+  display: none;
 }
 
 .modal {
@@ -1198,6 +1199,7 @@ input[type="number"]:focus {
 
 .range-input:hover {
   background-color: #E6E6E6;
+  color: #000000;
 }
 
 .range-input:focus {
@@ -1207,6 +1209,8 @@ input[type="number"]:focus {
 .range-input:active {
   background-color: #F2F2F2;
 }
+
+
 
 .input-from {
   border-radius: 4px 0 0 4px;
