@@ -323,7 +323,7 @@ input[type="number"]:focus {
 }
 
 .navigation-item-favorites:after {
-  content: ""attr(data-number)"";
+  content: attr(data-number);
   position: absolute;
   width: 20px;
   height: 20px;
