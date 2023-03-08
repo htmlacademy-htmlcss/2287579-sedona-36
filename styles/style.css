@@ -208,6 +208,8 @@ input[type="number"]:focus {
 
 .button-accept {
   padding: 8px 50px;
+  margin-top: auto;
+  margin-bottom: 32px;
 }
 
 .button-favorites {
@@ -226,7 +228,8 @@ input[type="number"]:focus {
 }
 
 .button-reset {
-  padding: 8px 57px;
+  padding: 6px 57px;
+
 }
 
 /*navigation*/
@@ -239,7 +242,7 @@ input[type="number"]:focus {
 
 .navigation-logo-holder {
   width: 140px;
-  margin-bottom: -4px;
+  margin-bottom: -6px;
   z-index: 1;
 }
 
@@ -252,7 +255,7 @@ input[type="number"]:focus {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 340px;
-  margin-left: 30px;
+  margin-left: 28px;
 }
 
 .navigation-user {
@@ -281,7 +284,7 @@ input[type="number"]:focus {
   position: absolute;
   left: 16px;
   right: 16px;
-  bottom: -2px;
+  bottom: 0;
   height: 2px;
   background-color: #756257;
 }
@@ -340,7 +343,6 @@ input[type="number"]:focus {
 .hero-img {
   display: block;
   margin: 0 auto;
-
 }
 
 .hero-upper-wrapper {
@@ -362,13 +364,15 @@ input[type="number"]:focus {
 }
 
 .hero-title-wrapper {
-  display: flex;
-  flex-direction: column;
   padding: 70px 274px;
 }
 
 .hero-title {
-  margin-bottom: 26px;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  margin-top: 25px;
 }
 
 /* advantages */
@@ -380,11 +384,15 @@ input[type="number"]:focus {
 
 .advantages-item-container {
   width: 230px;
-  padding: 112px 85px;
+  padding: 110px 85px;
 }
 
 .container-blue {
-  padding: 102px 85px;
+  padding: 100px 84px;
+}
+
+.container-reverse {
+  padding: 105px 84px;
 }
 
 .advantages-item {
@@ -449,7 +457,7 @@ input[type="number"]:focus {
 /* welcome */
 
 .welcome-wrapper {
-  padding: 64px 348px;
+  padding: 60px 348px;
 }
 
 .welcome-list {
@@ -460,7 +468,7 @@ input[type="number"]:focus {
 .welcome-item {
   position: relative;
   width: 400px;
-  padding: 81px 85px;
+  padding: 84px 85px;
 }
 
 .welcome-title:before {
@@ -495,8 +503,18 @@ input[type="number"]:focus {
   margin-bottom: 30px;
 }
 
+.welcome-description-main {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
 .welcome-description {
   margin-top: 20px;
+}
+
+.hotels-search-description {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .welcome-item-blue {
@@ -504,7 +522,7 @@ input[type="number"]:focus {
 }
 
 .hotels-search {
-  padding-top: 96px;
+  padding-top: 94px;
   padding-bottom: 96px;
 }
 
@@ -518,6 +536,11 @@ input[type="number"]:focus {
   margin-bottom: 20px;
 }
 
+.description-text-block {
+  margin-top: 20px;
+
+}
+
 
 /* subscribe*/
 
@@ -526,7 +549,6 @@ input[type="number"]:focus {
   background-color: #1E4043;
   background-image: url("../images/background/subscribe-background.jpg");
   background-repeat: no-repeat;
-  background-position: 100% auto;
   color: #FFFFFF;
 }
 
@@ -542,7 +564,7 @@ input[type="number"]:focus {
 .subscribe-form {
   display: flex;
   justify-content: center;
-  margin-top: 54px;
+  margin-top: 56px;
 }
 
 .input-subscribe {
@@ -586,12 +608,17 @@ input[type="number"]:focus {
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
   width: 144px;
+}
+
+.social-link {
+  display: block;
 }
 
 .social-icon:hover {
@@ -992,6 +1019,7 @@ input[type="number"]:focus {
   display: block;
   color: #FFFFFF;
   margin-right: 28px;
+  font-size: 16px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -1043,11 +1071,13 @@ input[type="number"]:focus {
 .catalog-filter-group {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  gap: 32px;
   margin: 0;
   padding: 0;
   border: none;
+}
+
+.catalog-filter-list {
+  width: 150px;
 }
 
 .catalog-filter-title {
@@ -1057,6 +1087,7 @@ input[type="number"]:focus {
   line-height: 24px;
   text-transform: capitalize;
   margin-bottom: 32px;
+  padding: 0;
 }
 
 .catalog-filter-item {
@@ -1123,13 +1154,13 @@ input[type="number"]:focus {
 }
 
 .range {
-  margin-bottom: 8px;
   width: 288px;
 }
 
 .range-scale {
   position: relative;
   height: 4px;
+  margin-top: 10px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1170,7 +1201,7 @@ input[type="number"]:focus {
 
 .toggle-max {
   top: -8px;
-  right: -10px;
+  right: 0;
 }
 
 .range-wrapper-inputs {
@@ -1188,6 +1219,7 @@ input[type="number"]:focus {
   font: inherit;
   background-color: #F2F2F2;
   border: none;
+  margin-top: 2px;
   margin-bottom: 36px;
   font-weight: 700;
   font-size: 18px;
@@ -1205,8 +1237,6 @@ input[type="number"]:focus {
 .range-input:active {
   background-color: #F2F2F2;
 }
-
-
 
 .input-from {
   border-radius: 4px 0 0 4px;
@@ -1236,6 +1266,7 @@ input[type="number"]:focus {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+  padding-top: 3px;
 }
 
 .select-control {
@@ -1243,7 +1274,7 @@ input[type="number"]:focus {
   color: #333333;
   font-family: inherit;
   font-size: 18px;
-  padding-left: 20px;
+  padding-left: 18px;
   padding-right: 23px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
@@ -1251,7 +1282,7 @@ input[type="number"]:focus {
   margin-left: 200px;
   background-image: url("../images/icons/arrow-down.svg");
   background-repeat: no-repeat;
-  background-position: right 21px center;
+  background-position: right 18px center;
   appearance: none;
 }
 
@@ -1317,8 +1348,8 @@ input[type="number"]:focus {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
+  padding-bottom: 38px;
+  margin-bottom: 38px;
   border-bottom: 1px solid #E6E6E6;
 }
 
@@ -1336,10 +1367,6 @@ input[type="number"]:focus {
 }
 
 .hotel-card-link {
-  color: #000000;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
   text-decoration: none;
   margin-bottom: 16px;
 }
@@ -1347,6 +1374,10 @@ input[type="number"]:focus {
 .hotel-card-title {
   margin-top: 16px;
   margin-bottom: 0;
+  color: #000000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 .hotel-card-content-wrapper {
@@ -1394,7 +1425,7 @@ input[type="number"]:focus {
 .pagination-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .pagination-link {
