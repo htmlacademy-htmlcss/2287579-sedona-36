@@ -86,14 +86,14 @@ body {
   text-align: center;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+[type="number"]::-webkit-outer-spin-button,
+[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-input[type='number'],
-input[type="number"]:hover,
-input[type="number"]:focus {
+[type="number"],
+[type="number"]:hover,
+[type="number"]:focus {
   appearance: none;
   -moz-appearance: textfield;
 }
@@ -384,15 +384,11 @@ input[type="number"]:focus {
 
 .advantages-item-container {
   width: 230px;
-  padding: 110px 85px;
+  padding: 111px 85px 113px;
 }
 
 .container-blue {
-  padding: 100px 84px;
-}
-
-.container-reverse {
-  padding: 105px 84px;
+  padding: 100px 85px;
 }
 
 .advantages-item {
@@ -457,18 +453,19 @@ input[type="number"]:focus {
 /* welcome */
 
 .welcome-wrapper {
-  padding: 60px 348px;
+  padding: 61px 348px;
 }
 
 .welcome-list {
   display: flex;
   position: relative;
+  padding-top: 5px;
 }
 
 .welcome-item {
   position: relative;
   width: 400px;
-  padding: 84px 85px;
+  padding: 81px 85px 84px;
 }
 
 .welcome-title:before {
@@ -477,8 +474,9 @@ input[type="number"]:focus {
   width: 75px;
   height: 72px;
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   background-repeat: no-repeat;
+
 }
 
 .welcome-housing:before {
