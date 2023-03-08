@@ -302,9 +302,10 @@ input[type="number"]:focus {
   display: block;
   width: 20px;
   height: 20px;
-  margin-right: 24px;
+  padding: 22px 12px;
   background-image: url("../images/icons/search.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navigation-item-favorites {
@@ -312,8 +313,10 @@ input[type="number"]:focus {
   position: relative;
   width: 20px;
   height: 20px;
+  padding: 22px 12px;
   background-image: url("../images/icons/favorites.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navigation-item-favorites:after {
@@ -321,8 +324,8 @@ input[type="number"]:focus {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 10px;
-  top: -10px;
+  left: 20px;
+  top: 10px;
   background-color: #7DB54F;
   border-radius: 50%;
   font-weight: 400;
@@ -355,7 +358,7 @@ input[type="number"]:focus {
   position: absolute;
   width: 1200px;
   height: 57px;
-  bottom: 0;
+  bottom: -1px;
 }
 
 .hero-title-wrapper {
@@ -665,7 +668,7 @@ input[type="number"]:focus {
 }
 
 .modal-container-close {
-  /*display: none;*/
+  display: none;
 }
 
 .modal {
