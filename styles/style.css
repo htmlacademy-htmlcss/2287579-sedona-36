@@ -695,7 +695,7 @@ input[type="number"]:focus {
 }
 
 .modal-container-close {
-  display: none;
+  /*display: none;*/
 }
 
 .modal {
@@ -753,18 +753,24 @@ input[type="number"]:focus {
 
 .group-date-in {
   grid-column: 1 / 4;
+  position: relative;
 }
 
 .group-date-out {
   grid-column: 1 / 4;
+  position: relative;
 }
 
 .group-adults {
   grid-column: 1 / 2;
+  position: relative;
+  top: 4px;
 }
 
 .group-children {
   grid-column: 3 / 4;
+  position: relative;
+  top: 4px;
 }
 
 .booking-form-user-options {
@@ -772,8 +778,10 @@ input[type="number"]:focus {
 }
 
 .booking-form-search {
+  width: 577px;
   border-radius: 10px;
-  padding: 18px 256px;
+  padding: 18px 26px;
+  margin-top: 6px;
   font-size: 20px;
   line-height: 24px;
   background-color: #83B3D3;
@@ -794,6 +802,7 @@ input[type="number"]:focus {
 
 .field-clarification {
   position: relative;
+  display: block;
 }
 
 .clarification-text {
@@ -804,25 +813,17 @@ input[type="number"]:focus {
   cursor: pointer;
 }
 
-.group-date-in {
-  position: relative;
-}
-
 .message-under-field-red {
   position: absolute;
-  bottom: -22px;
+  bottom: -24px;
   left: 157px;
   font-size: 16px;
   color: #FF5757;
 }
 
-.group-date-out {
-  position: relative;
-}
-
 .message-under-field-normal {
   position: absolute;
-  bottom: -22px;
+  bottom: -26px;
   left: 157px;
   font-size: 16px;
 }
@@ -866,6 +867,7 @@ input[type="number"]:focus {
   background-image: url("../images/icons/calendar.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
+  margin-left: auto;
 }
 
 .field-group {
@@ -877,10 +879,6 @@ input[type="number"]:focus {
 
 .field-group:last-child {
   margin-bottom: 0;
-}
-
-.field-date {
-  margin-left: auto;
 }
 
 .field-count {
@@ -911,14 +909,11 @@ input[type="number"]:focus {
 
 .button-minus {
   border-radius: 4px 0 0 4px;
+  margin-left: auto;
 }
 
 .button-plus {
   border-radius: 0 4px 4px 0;
-}
-
-.button-minus {
-  margin-left: auto;
 }
 
 .button-minus-svg,
@@ -957,11 +952,11 @@ input[type="number"]:focus {
   color: #FFFFFF;
   font-size: 16px;
   line-height: 20px;
-  padding: 15px 18px 18px 22px;
+  padding: 18px 18px 26px 20px;
   border-radius: 10px;
-  width: 216px;
+  width: 218px;
   position: absolute;
-  margin-top: 15px;
+  margin-top: 13px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
