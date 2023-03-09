@@ -103,7 +103,7 @@ body {
 [type="number"]:hover,
 [type="number"]:focus {
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   -moz-appearance: textfield;
 }
 
@@ -707,7 +707,7 @@ body {
 }
 
 .modal-container-close {
-  /*display: none*/
+  display: none
 }
 
 .modal-booking {
@@ -900,7 +900,7 @@ body {
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   margin: 0;
 }
 
@@ -1261,7 +1261,7 @@ body {
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   margin: 0;
 }
 
@@ -1291,7 +1291,7 @@ body {
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 .select-control:hover {
