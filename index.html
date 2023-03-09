@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" type="image/svg" href="images/icons/favicon.svg">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
   </head>
 
   <body>
@@ -39,8 +40,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="button button-brown navigation-item-button" href="#">
-                Хочу сюда!
+              <a class="button button-brown navigation-item-button" href="#">Хочу сюда!
               </a>
             </li>
           </ul>
@@ -114,7 +114,8 @@
           <ul class="welcome-list clear-list">
             <li class="welcome-item welcome-item-blue">
               <h3 class="welcome-title title-text welcome-housing">Жильё</h3>
-              <p class="welcome-description description-text">Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в кино!
+              <p class="welcome-description description-text">Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в
+                кино!
               </p>
             </li>
             <li class="welcome-item">
@@ -229,8 +230,8 @@
         </div>
       </footer>
       <div class="modal-container modal-container-close">
-        <div class="modal modal-booking">
-          <button class="modal-close-button">
+        <div class="modal-booking">
+          <button class="modal-close-button" type="button">
             <span class="visually-hidden">Закрыть</span>
             <svg class="modal-close-button-svg" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"
               fill="black" xmlns="http://www.w3.org/2000/svg">
@@ -259,14 +260,14 @@
                 <label class="field-clarification field-correct" for="adults">
                   <span class="clarification-text">Взрослые:</span>
                 </label>
-                <button class="field-button button-minus">
+                <button class="field-button button-minus" type="button">
                   <svg class="button-minus-svg" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"
                     fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 9V11H17V9H3Z" />
                   </svg>
                 </button>
                 <input class="booking-form-field field-count" type="number" id="adults" placeholder="2">
-                <button class="field-button button-plus">
+                <button class="field-button button-plus" type="button">
                   <svg class="button-plus-svg" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"
                     fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
@@ -278,29 +279,29 @@
                   <label class="field-clarification field-correct" for="children">
                     <span class="clarification-text text-children">Дети:
                     </span>
-                    <span class="tooltip">
-                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-                        <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="white"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="13" cy="13" r="13" fill="#83B3D3" />
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" />
-                        </svg>
-                      </button>
-                      <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
-                        Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
-                        размещаются бесплатно.
-                      </span>
-                    </span>
                   </label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                      <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="white"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" />
+                      </svg>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
+                      будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                      размещаются бесплатно.
+                    </span>
+                  </span>
                 </span>
-                <button class="field-button button-minus">
+                <button class="field-button button-minus" type="button">
                   <svg class="button-minus-svg" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"
                     fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 9V11H17V9H3Z" />
                   </svg>
                 </button>
                 <input class="booking-form-field field-count" type="number" id="children" placeholder="2">
-                <button class="field-button button-plus">
+                <button class="field-button button-plus" type="button">
                   <svg class="button-plus-svg" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"
                     fill="rgba(117, 97, 87, 0.3)" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница каталога</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" type="image/svg" href="images/icons/favicon.svg">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
   </head>
 
   <body>
@@ -43,8 +44,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="button button-brown navigation-item-button"  href="#">
-                Хочу сюда!
+              <a class="button button-brown navigation-item-button" href="#">Хочу сюда!
               </a>
             </li>
           </ul>
@@ -73,7 +73,7 @@
           </header>
           <section class="catalog-hotels">
             <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
-            <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get" class="catalog-filter">
+            <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
               <div class="filter-form-wrapper-left">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -147,10 +147,10 @@
                     </div>
                     <div class="range-scale">
                       <div class="range-bar" style="width: 227px">
-                        <button class="range-toggle toggle-min">
+                        <button class="range-toggle toggle-min" type="button">
                           <span class="visually-hidden">Изменить минимальную цену.</span>
                         </button>
-                        <button class="range-toggle toggle-max">
+                        <button class="range-toggle toggle-max" type="button">
                           <span class="visually-hidden">Изменить максимальную цену.</span>
                         </button>
                       </div>
@@ -167,11 +167,10 @@
         </div>
         <section class="catalog-catalog">
           <div class="sorting-wrapper">
-            <h2 class="catalog-catalog-results title-text">
-              Найдено гостиниц:
+            <h2 class="catalog-catalog-results title-text">Найдено гостиниц:
               <span class="catalog-catalog-quantity title-text">38</span>
             </h2>
-            <select class="select-control" name="" id="" aria-label="Сортировка">
+            <select class="select-control" name="sorting" id="sorting-select" aria-label="Сортировка">
               <option value="cheap">Сначала дешевые</option>
               <option value="popular">Сначала популярные</option>
               <option value="expensive">Сначала дорогие</option>
@@ -339,7 +338,7 @@
               <a href="#" class="pagination-link pagination-link-more">...</a>
             </li>
             <li class="pagination-item">
-              <a href="#" class="pagination-link pagination-link-last">10</a>
+              <a href="#" class="pagination-link">10</a>
             </li>
           </ul>
         </section>
